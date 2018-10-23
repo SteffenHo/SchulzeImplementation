@@ -63,7 +63,7 @@ public class SchulzeHelper {
 
         System.out.println("The election has " + countWinners + " winners");
         for(int i = 0; i < countWinners; i++){
-            System.out.println("Winner " + i + " is alternative " + winner[i]);
+            System.out.println("Winner " + (i +1) + " is alternative " + winner[i]);
         }
     }
 }
