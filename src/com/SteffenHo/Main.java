@@ -5,6 +5,17 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
 
+        //Steffen Schulze
+        //Example 1
+        /*int[][] N ={
+                {-1, 13, 19, 13},
+                {18, -1, 19, 23},
+                { 9,  9, -1,  4},
+                {15,  5,  24, -1}
+        };
+        Schulze s = new Schulze(N, 4);*/
+
+        //original Schulze
         //Example 1
         /*
         int[][] N ={
@@ -48,7 +59,7 @@ public class Main {
                 {36, 59, -1, 45},
                 {50, 72, 29, -1}
         };
-        Schulze s = new Schulze(N, 4);
+        Schulze s = new Schulze(N, 4, 2);
 
     }
 }

@@ -15,9 +15,17 @@ public class Schulze {
 
     private Boolean [] winners;
 
+    private int mode;
+
     public Schulze(int[][] pN, int pCount){
+       this(pN, pCount, 1);
+    }
+
+    public Schulze(int[][] pN, int pCount, int pMode){
         count = pCount;
         N = pN;
+        mode = pMode;
+
         SchulzeHelper.printN(N, count);
 
         init();
@@ -36,7 +44,17 @@ public class Schulze {
             for(int j = 0; j < count; j++){
                 if(i != j){
                     if(N[i][j] > N[j][i]) { // alternative i wins against j
-                        P[i][j] = N[i][j];
+                        switch (mode) {
+                            case 1:
+                                P[i][j] = N[i][j]; // winning votes
+                                break;
+                            case 2:
+                                P[i][j] = N[i][j] - N[j][i]; // margin
+                                break;
+                                default:
+                                    System.out.println("Wrong mode");
+                        }
+
                     }else {
                         P[i][j] = 0; // alternative i lose
                     }
